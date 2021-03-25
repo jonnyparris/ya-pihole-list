@@ -34,5 +34,5 @@ https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-A
 https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/spam.mails
 # Ads, (Mobile) App Ads, Phishing, Malvertising
 https://dbl.oisd.nl/
-# windows telemetry
-https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/dnscrypt/spy.txt
+# windows telemetry [not needed]
+# https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/dnscrypt/spy.txt
