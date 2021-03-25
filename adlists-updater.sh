@@ -8,7 +8,7 @@ basename="pihole"
 PIHOLE_COMMAND="/usr/local/bin/${basename}"
 piholeDir="/etc/${basename}"
 gravityDBfile="${piholeDir}/gravity.db"
-adListSource="https://raw.githubusercontent.com/JavanXD/ya-pihole-list/master/adlists.list.updater"
+adListSource="https://raw.githubusercontent.com/jonnyparris/ya-pihole-list/master/adlists.list.updater"
 adListFile="/home/pi/adlists.list.updater"
 tmpFile="/home/pi/adlists.list.updater.tmp"
 table="adlist"
@@ -33,7 +33,7 @@ else
 fi
 
 if [ $update -eq 1 ] ; then
-  # update raspbian
+  # update raspbian (aka Raspberry Pi OS)
   echo "Info: Updating Raspbian"
   apt-get update && apt-get dist-upgrade -y
 
@@ -42,8 +42,8 @@ if [ $update -eq 1 ] ; then
   pihole updatePihole
 fi
 
-# update gravity table (create or migrate if not exists yet)
-echo "Info: Create or migrate gravity.db table if not exists yet"
+# update gravity table
+echo "Info: Create or migrate gravity.db table if it doesn't exist yet"
 pihole updateGravity
 
 # download latest adlists list
@@ -93,5 +93,5 @@ if [ -e "${adListFile}" ]; then
 fi
 
 # update gravity table (activate the changes to the gravity.db)
-echo "Info: Caling 'pihole -g' because of the changes to the gravity.db"
+echo "Info: Calling 'pihole -g' because of the changes to the gravity.db"
 pihole updateGravity

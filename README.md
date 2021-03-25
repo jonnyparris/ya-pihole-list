@@ -9,7 +9,7 @@
 ## Quickstart
 ```
 cd ~
-git clone --depth=1 https://github.com/JavanXD/ya-pihole-list.git ya-pihole-list
+git clone --depth=1 https://github.com/jonnyparris/ya-pihole-list.git ya-pihole-list
 cd ya-pihole-list
 sudo chmod a+x adlists-updater.sh
 sudo sh adlists-updater.sh
@@ -25,7 +25,7 @@ sudo sh adlists-updater.sh
 
 ## Enabling Raspbian and Pi-hole Auto Updater
 
-Add the argument `1` to your `sudo sh adlists-updater.sh 1` call. 
+Add the argument `1` to your `sudo sh adlists-updater.sh 1` call.
 
 ## Updating your adlists automatically
 
